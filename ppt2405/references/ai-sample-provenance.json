@@ -1,0 +1,17 @@
+{
+  "source": "OpenAI built-in image_gen tool edit; no Python drawing, crop or image alteration",
+  "prompt": "Edit the supplied image for an ultra-wide academic slide figure. Change only the canvas framing and layout scale: use an approximately 3.7:1 panoramic canvas (target about 3700 by 1000). Keep the complete same three-stage scientific point-cloud concept, left to right: dense blue buildings and complete road; separated blue local facade and ground patches with restrained orange emphasis; sparse high-level building-and-road nodes with orange association connections. Keep both blue transition arrows between stages. All content must be fully visible, with no building, road, node, point cluster or arrow cut by an image edge. Remove the large empty white bands above and below. Arrange the three complete stages so the visible artwork occupies 90–94 percent of the canvas width and 82–88 percent of its height; only a small, even white safety margin remains. Maintain the original blue/white point-cloud style with restrained orange highlights and pure white background. Do not add any text, letters, numbers, axes, charts, legends, logos or watermark. Do not change this into a measured scientific result. This is a conceptual illustration. Preserve all three semantic stages; do not crop a stage to fill the wide canvas.",
+  "date": "2026-11-17",
+  "purpose": "Reduce empty margins and enlarge complete three-stage conceptual artwork in academic PPT figure frame.",
+  "role": "AI-generated conceptual illustration, not a paper figure or experimental result.",
+  "visualReview": "Viewed original and final generated output. Complete left buildings/road, central geometric patches, right semantic nodes/connections and both transition arrows remain visible; no clipped visible content, no text or numerical/plot artifacts. White margins much smaller than original.",
+  "limitations": [
+    "Tool returned approximately 3:1 despite prompt requesting approximately 3.7:1; actual dimensions recorded below.",
+    "Illustrative point geometry and associations are conceptual, not measured data.",
+    "Raster image; exact palette hex values are not guaranteed."
+  ],
+  "width_px": 2175,
+  "height_px": 723,
+  "sha256": "36a74e3f89b5d240c13e3fc11db304c2e49240e343e681074a47d79d495217c5",
+  "asset": "Embedded in assets/ppt2405.pptx, layout 25, ai-image"
+}

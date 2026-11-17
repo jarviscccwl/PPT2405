@@ -1,0 +1,27 @@
+{
+  "name": "ppt2405",
+  "version": "1.2.1",
+  "template_revision": "refined-notes-sources-2026-11-17",
+  "created_at": "2026-11-17T08:13:13.898870+00:00",
+  "template_sha256": "264383ed9f00ed4cc46101ca0fae2ac698adc17e054ab94ad774a8a8d2564449",
+  "catalog_sha256": "10c62529b67d07ee7892ee5d1c757aa0144e194fc2756681174663e14356e675",
+  "page_types": 26,
+  "canvas_emu": [
+    12192000,
+    6858000
+  ],
+  "primary_style_sources": [
+    "模板一",
+    "模板三"
+  ],
+  "supplementary_style_source": "模板二",
+  "workflow_inspiration": "https://github.com/hugohe3/ppt-master",
+  "reference_note": "用户提供的三套PPT与论文作为风格参考。此包未包含完整参考论文，不宣称对原作者内容取得新的许可。",
+  "ai_sample_label": "AI生成示意图，非论文原图",
+  "preview_renderer": "WPS Office 12.1 native PDF export",
+  "validation_scope": "Latest template opened in WPS without repair and exported to PDF; all 26 pages visually reviewed. All 26 layouts passed strict composition smoke checks; source-to-notes and text alignment behaviors verified. Production reports require their own content and visual validation.",
+  "updated_at": "2026-11-17T13:15:30.862929+00:00",
+  "preview_sha256": "650763839974ae799797855dd397252107890c7e196018f8fa56139ef0880d5d",
+  "potx_sha256": "bc172d0e20d297c0dc0ba56ad437056450cc26a13770a17f30bee95fc92b2c06",
+  "repository": "https://github.com/jarviscccwl/PPT2405"
+}
