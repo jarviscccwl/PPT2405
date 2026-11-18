@@ -1,6 +1,6 @@
 # ppt2405 确定性模板填充 API
 
-`scripts/compose_deck.py` 复制所选模板页，填充原生对象，保留母版、布局、校标与默认样式。它不进行论文理解或自动选图，也不把实际渲染验收替换为程序检查。
+`scripts/compose_deck.py` 复制普通样例页并按名称填充内容槽。校标与封面照片也是可编辑的页面图片，其名称以 `装饰.` 开头。此名称前缀专供装饰图片，请勿用于需要替换和核验来源的论文插图。
 
 ## 运行
 
@@ -56,7 +56,7 @@ python scripts/compose_deck.py --plan plan.json --output report.pptx --report re
 
 顶层仅支持 `version/template_sha256/catalog_sha256/mode/font_files/slides/source`。每页仅支持 `layout/text/math/images/tables/notes/source/omit`。拼错字段或 slot 明确报错。
 
-若某个可选内容槽本次不用，明确填写例如 `"omit": ["assumptions"]`，使用该版式真实存在的名称。脚本清空该槽内容及它自身的填充/边框，保留占位匹配；原生表格、独立 AI 图片则从当前页移除。省略项记录到 `report.omitted`，`strict` 接受这种明确处理。写空字符串仍视为未填，同一槽不能既 omit 又赋值。该操作不删除母版/布局上的固定框线或固定标签；若整个区域不合用途，应选另一版式或调整模板后重新验收。
+若某个可选内容槽本次不用，可填 `"omit": ["assumptions"]` 并使用该页真实槽名。脚本清空该槽内容及自身的填充和边框，原生表格或独立 AI 图片则从当前页移除。`report.omitted` 会记录省略项。空字符串仍视为未填，同一槽不能既 omit 又赋值。相邻的独立底板、箭头和标签可在该普通页上另行调整。
 
 `source-*` 或 catalog 标为 `deliveryRole: "notes-source"` 的来源槽自动清空隐藏，无需填充或逐一 `omit`。兼容旧计划在 `text` 中赋给这些槽的来源文字会转入备注，不参与正文适配。不要将实际内容填入来源槽。最新版的 `metric-direction`（版式15）和 `comparison-conditions`（版式19）分别用于可见指标方向和比较条件，应按当前内容填写；它们不是来源槽。此规则不移除图片内部标签、原图署名、AI 标识或封面书目信息。
 

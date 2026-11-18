@@ -561,7 +561,8 @@ def compose(args,report):
             if len(matches)!=1:fail(f'Template/catalog mismatch: expected one named slot {full}, found {len(matches)}')
             lookup[sname]=matches[0];lookup[full]=matches[0];kind_map[sname]='image' if slot.get('type')=='picture' else 'text'
         actual_tables=[x for x in tree if x.find('.//a:tbl',NS) is not None]
-        actual_images=[x for x in tree if x.tag==q('p','pic')]
+        # Slide-local branding stays editable and is not a research-image slot.
+        actual_images=[x for x in tree if x.tag==q('p','pic') and not named(x).startswith('装饰.')]
         table_map={};image_map={k:v for k,v in lookup.items() if v.tag in {q('p','sp'),q('p','pic')} and (k.startswith('ppt2405.') and k.rsplit('.',1)[-1] in slot_catalog and slot_catalog[k.rsplit('.',1)[-1]].get('type')=='picture' or k in kind_map and kind_map[k]=='image')}
         for i,item in enumerate(actual_tables,1):
             table_map['table-'+str(i)]=item

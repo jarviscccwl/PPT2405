@@ -1,4 +1,4 @@
 interface:
   display_name: "ppt2405"
-  short_description: "从论文或大纲制作蓝白学术汇报，完整提取图表并适配内置模板"
-  default_prompt: "使用 $ppt2405，根据我提供的论文或大纲制作可编辑的文献汇报PPT，补齐真实资料、完整提取图表并按内置模板优化排版。"
+  short_description: "用文献、大纲或笔记制作可编辑学术汇报，按需检索资料和生成示意图"
+  default_prompt: "使用 $ppt2405 根据我的材料制作学术汇报，补查证据，按需提取原图或生成示意图。"
